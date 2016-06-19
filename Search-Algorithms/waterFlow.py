@@ -105,15 +105,10 @@ output = open("output.txt", "w")
 testcases = int(input_file.readline())
 for i in range(0,testcases):
 	algorithm = input_file.readline().strip()
-	#print algorithm
 	source_node = input_file.readline().strip()
-	#print source_node
 	destination_nodes = input_file.readline().split()
-	#print destination_nodes
 	middle_nodes = input_file.readline().split()
-	#print middle_nodes
 	num_pipes = int(input_file.readline())
-	#print num_pipes
 	children ={}
 	for j in range(0,num_pipes):
 		connection = input_file.readline().split()
@@ -132,9 +127,7 @@ for i in range(0,testcases):
 			children[connection[0]] = list
 	for key, value in children.items():
 		children[key] = sorted(value, key=lambda k: k['name'])
-	#print children
 	start_time = int(input_file.readline())
-	#print start_time
 	
 	input_file.readline()
 	solutions = []
